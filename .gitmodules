@@ -1,0 +1,24 @@
+[submodule "Behira"]
+	path = Behira
+	url = git@github.com:I-have-an-H/Behira.git
+[submodule "Jareth"]
+	path = Jareth
+	url = git@github.com:I-have-an-H/Jareth.git
+[submodule "Kohana"]
+	path = Kohana
+	url = git@github.com:I-have-an-H/Kohana.git
+[submodule "Stheno"]
+	path = Stheno
+	url = git@github.com:I-have-an-H/Stheno.git
+[submodule "Sthore"]
+	path = Sthore
+	url = git@github.com:I-have-an-H/Sthore.git
+[submodule "Veloth"]
+	path = Veloth
+	url = git@github.com:I-have-an-H/Veloth.git
+[submodule "Zenith"]
+	path = Zenith
+	url = git@github.com:I-have-an-H/Zenith.git
+[submodule "Zephyra"]
+	path = Zephyra
+	url = git@github.com:I-have-an-H/Zephyra.git
