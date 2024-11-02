@@ -1,5 +1,8 @@
 {
   "private": true,
+  "workspaces": [
+    "submodules/*"
+  ],
   "scripts": {
     "lint": "npx sort-package-json && npx validate-branch-name",
     "prepare": "node .husky/install.mjs"
@@ -9,7 +12,7 @@
     "validate-branch-name": "^1.3.1"
   },
   "validate-branch-name": {
-    "errorMsg": "Invalid branch name \n Ex. [main, dev, feature/feature-info, fix/112-fix-info, chores/chores-info]",
+    "errorMsg": "Invalid branch name\nEx. [main, dev, feature/feature-info, fix/112-fix-info, chores/chores-info]",
     "pattern": "^(main|dev){1}$|^(chores|feature|fix)/.+$"
   }
 }
