@@ -1,6 +1,1 @@
-if [ -z "${CHECKS_RUN}" ]; then
-  echo "Pre-commit checks will start as it is a manual commit"
-  npx validate-branch-name
-else
- echo "Skipping Pre-commit checks as they already executed"
-fi
+npx validate-branch-name
