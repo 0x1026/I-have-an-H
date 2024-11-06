@@ -1,12 +1,16 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.schema.json",
   "name": "I have an H",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  // "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
-  "features": {},
+  "features": { },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
@@ -17,7 +21,24 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode"]
+      "extensions": [
+        "bierner.github-markdown-preview",
+        "bmewburn.vscode-intelephense-client",
+        "DavidAnson.vscode-markdownlint",
+        "DEVSENSE.composer-php-vscode",
+        "esbenp.prettier-vscode",
+        "mrmlnc.vscode-apache",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
+        "rvest.vs-code-prettier-eslint",
+        "shd101wyy.markdown-preview-enhanced",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+        "vscjava.vscode-java-pack",
+        "xdebug.php-debug",
+        "YoavBls.pretty-ts-errors",
+        "yzhang.markdown-all-in-one"
+      ]
     }
   }
 

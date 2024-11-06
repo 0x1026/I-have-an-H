@@ -13,7 +13,7 @@ convention:
     - chore
     - merge
     - revert
-  commitScopes: ["wip", "configs", "formatting", "code", "deployment", "tests"]
+  commitScopes: ['wip', 'configs', 'formatting', 'code', 'deployment', 'tests', 'submodules']
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:
@@ -22,7 +22,7 @@ changelog:
     - perf
     - merge
   includeInvalidCommits: true
-  commitIgnoreRegexPattern: "^WIP "
+  commitIgnoreRegexPattern: '^WIP '
   headlines:
     feat: Features
     fix: Bug Fixes
