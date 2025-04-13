@@ -2,6 +2,7 @@ import common from 'eslint-config-neon/flat/common.js';
 import node from 'eslint-config-neon/flat/node.js';
 import prettier from 'eslint-config-neon/flat/prettier.js';
 import typescript from 'eslint-config-neon/flat/typescript.js';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import merge from 'lodash.merge';
 import tseslint from 'typescript-eslint';
 
@@ -17,7 +18,7 @@ const typeScriptRuleset = merge(...typescript, {
 		parserOptions: {
 			warnOnUnsupportedTypeScriptVersion: false,
 			allowAutomaticSingleRunInference: true,
-			project: ['tsconfig.eslint.json', 'submodules/*/tsconfig.eslint.json'],
+			project: ['tsconfig.eslint.json', 'apps/*/tsconfig.eslint.json', 'packages/*/tsconfig.eslint.json'],
 		},
 	},
 	rules: {
@@ -35,11 +36,12 @@ const typeScriptRuleset = merge(...typescript, {
 		],
 	},
 	settings: {
-		'import/resolver': {
-			typescript: {
-				project: ['tsconfig.eslint.json', 'submodules/*/tsconfig.eslint.json'],
-			},
-		},
+		'import-x/resolver-next': [
+			createTypeScriptImportResolver({
+				noWarnOnMultipleProjects: true,
+				project: ['tsconfig.eslint.json', 'apps/*/tsconfig.eslint.json', 'packages/*/tsconfig.eslint.json'],
+			}),
+		],
 	},
 });
 
