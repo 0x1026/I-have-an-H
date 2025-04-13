@@ -13,7 +13,7 @@ convention:
     - chore
     - merge
     - revert
-  commitScopes: ['wip', 'configs', 'formatting', 'code', 'deployment', 'tests', 'submodules']
+  commitScopes: ['wip', 'configs', 'formatting', 'code', 'deployment', 'tests', 'gitignore']
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
 changelog:
   commitTypes:
@@ -31,9 +31,9 @@ changelog:
     breakingChange: BREAKING CHANGES
 
   ## GitHub
-  commitUrl: https://github.com/I-have-an-H/workspace/commit/%commit%
-  commitRangeUrl: https://github.com/I-have-an-H/workspace/compare/%from%...%to%?diff=split
+  commitUrl: https://github.com/0x1026/I-have-an-H/commit/%commit%
+  commitRangeUrl: https://github.com/0x1026/I-have-an-H/compare/%from%...%to%?diff=split
 
   ## GitHub Issues
   issueRegexPattern: "#\\d+"
-  issueUrl: https://github.com/I-have-an-H/workspace/issues/%issue%
+  issueUrl: https://github.com/0x1026/I-have-an-H/issues/%issue%
