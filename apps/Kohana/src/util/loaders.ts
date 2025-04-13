@@ -51,7 +51,7 @@ export async function loadStructures<Structure>(
 		if (file === 'index.js' || !file.endsWith('.js')) continue;
 
 		// Import the structure dynamically from the file
-		const structure = (await import(`${dir}/${file}`)).default;
+		const structure = (await import(fileUrl.toString())).default;
 
 		// If the structure is a valid structure, add it
 		if (predicate(structure)) structures.push(structure);
