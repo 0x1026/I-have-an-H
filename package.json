@@ -1,9 +1,23 @@
 {
-  "name": "@i-have-an-h/workspace",
+  "name": "@0x1026/i-have-an-h",
+  "version": "0.0.0",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/0x1026/I-have-an-H/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x1026/I-have-an-H.git"
+  },
+  "license": "AGPL-3.0-only",
+  "author": {
+    "name": "hugoovf",
+    "url": "https://github.com/hugoovf"
+  },
   "type": "module",
   "workspaces": [
-    "submodules/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "lint": "npx sort-package-json && npx validate-branch-name",
@@ -14,6 +28,7 @@
     "eslint": "^8.57.1",
     "eslint-config-neon": "^0.1.62",
     "eslint-formatter-pretty": "^6.0.1",
+    "eslint-import-resolver-typescript": "^4.3.2",
     "husky": "^9.1.6",
     "lodash.merge": "^4.6.2",
     "prettier": "^3.3.3",
