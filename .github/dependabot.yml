@@ -7,6 +7,35 @@
 version: 2
 updates:
   - package-ecosystem: devcontainers
-    directory: '/'
+    directory: "/"
     schedule:
       interval: weekly
+    labels: []
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels: []
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: docker
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels: []
+    groups:
+      general:
+        dependency-type: production
+        applies-to: version-updates
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels: []
+    groups:
+      general:
+        dependency-type: production
+        applies-to: version-updates
