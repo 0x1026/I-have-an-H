@@ -1,0 +1,43 @@
+{
+	"$schema": "https://json.schemastore.org/package.json",
+	"name": "@0x1026/kohana",
+	"version": "0.0.0",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/0x1026/I-have-an-H.git",
+		"directory": "apps/Kohana"
+	},
+	"license": "AGPL-3.0-only",
+	"author": {
+		"name": "hugoovf",
+		"url": "https://github.com/hugoovf"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"deploy": "node --require dotenv/config dist/util/deploy.js",
+		"format": "prettier --write . && cross-env TIMING=1 eslint --fix --format=pretty src",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint --format=pretty src",
+		"start": "node --require dotenv/config dist/index.js"
+	},
+	"dependencies": {
+		"@discordjs/core": "^2.0.1",
+		"discord.js": "^14.16.3",
+		"dotenv": "^16.4.7"
+	},
+	"devDependencies": {
+		"@sapphire/ts-config": "^5.0.1",
+		"@types/node": "^22.10.10",
+		"eslint": "^9.24.0",
+		"eslint-config-neon": "^0.2.7",
+		"eslint-formatter-compact": "^8.40.0",
+		"eslint-formatter-pretty": "^6.0.1",
+		"prettier": "^3.5.3",
+		"typescript": "~5.5.4",
+		"zod": "^3.24.1"
+	},
+	"engines": {
+		"node": ">=22.12.0"
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig.json",
+	"extends": [ "@sapphire/ts-config", "@sapphire/ts-config/extra-strict" ],
+	"compilerOptions": {
+		// Type Checking
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"skipLibCheck": true,
+		"strict": true,
+
+		// Modules
+		"allowArbitraryExtensions": false,
+		"allowImportingTsExtensions": false,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true,
+
+		// Emit
+		"declaration": false,
+		"declarationMap": false,
+		"importHelpers": false,
+		"newLine": "lf",
+		"noEmitHelpers": true,
+		"outDir": "dist",
+		"removeComments": true,
+		"sourceMap": false,
+
+		// Interop Constraints
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": false,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+
+		// Language and Environment
+		"experimentalDecorators": true,
+		"lib": [ "ESNext" ],
+		"target": "ESNext",
+		"useDefineForClassFields": true
+	},
+	"include": [ "src/**/*.ts", "bin" ],
+	"exclude": [ "node_modules", "dist" ]
+}
